@@ -1,0 +1,197 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "flee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "throwBall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "flee()": "48b97ffd",
+    "throwBall()": "a4aaac64"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"flee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"throwBall\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/codegen/world/IEncounterSystem.sol\":\"IEncounterSystem\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":3000},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\"]},\"sources\":{\"src/codegen/world/IEncounterSystem.sol\":{\"keccak256\":\"0xd703b6a1da88b2cd0137c8bc5d5d53739f38a5a96de300f0c151c0bf2993448a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3654385ffa0bc28a6b718b37adfe3a218fbe6132c832ce6ba166be53aed74ef7\",\"dweb:/ipfs/QmSbz3C7xGWDAQjogG8ihvLmaewh169xSPYXfB4hnKjPhE\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.13+commit.abaa5c0e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "flee"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "throwBall"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@latticexyz/=node_modules/@latticexyz/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 3000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/codegen/world/IEncounterSystem.sol": "IEncounterSystem"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/codegen/world/IEncounterSystem.sol": {
+        "keccak256": "0xd703b6a1da88b2cd0137c8bc5d5d53739f38a5a96de300f0c151c0bf2993448a",
+        "urls": [
+          "bzz-raw://3654385ffa0bc28a6b718b37adfe3a218fbe6132c832ce6ba166be53aed74ef7",
+          "dweb:/ipfs/QmSbz3C7xGWDAQjogG8ihvLmaewh169xSPYXfB4hnKjPhE"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/codegen/world/IEncounterSystem.sol",
+    "id": 67639,
+    "exportedSymbols": {
+      "IEncounterSystem": [
+        67638
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:168:104",
+    "nodes": [
+      {
+        "id": 67631,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:104",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 67638,
+        "nodeType": "ContractDefinition",
+        "src": "107:92:104",
+        "nodes": [
+          {
+            "id": 67634,
+            "nodeType": "FunctionDefinition",
+            "src": "138:30:104",
+            "nodes": [],
+            "functionSelector": "a4aaac64",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "throwBall",
+            "nameLocation": "147:9:104",
+            "parameters": {
+              "id": 67632,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "156:2:104"
+            },
+            "returnParameters": {
+              "id": 67633,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "167:0:104"
+            },
+            "scope": 67638,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 67637,
+            "nodeType": "FunctionDefinition",
+            "src": "172:25:104",
+            "nodes": [],
+            "functionSelector": "48b97ffd",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flee",
+            "nameLocation": "181:4:104",
+            "parameters": {
+              "id": 67635,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "185:2:104"
+            },
+            "returnParameters": {
+              "id": 67636,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "196:0:104"
+            },
+            "scope": 67638,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEncounterSystem",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          67638
+        ],
+        "name": "IEncounterSystem",
+        "nameLocation": "117:16:104",
+        "scope": 67639,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 104
+}

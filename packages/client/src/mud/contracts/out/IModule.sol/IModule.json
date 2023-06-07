@@ -1,0 +1,364 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resourceSelector",
+          "type": "string"
+        }
+      ],
+      "name": "RequiredModuleNotFound",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "getName",
+      "outputs": [
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "args",
+          "type": "bytes"
+        }
+      ],
+      "name": "install",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getName()": "17d7de7c",
+    "install(bytes)": "13861fb5"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resourceSelector\",\"type\":\"string\"}],\"name\":\"RequiredModuleNotFound\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"getName\",\"outputs\":[{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"args\",\"type\":\"bytes\"}],\"name\":\"install\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getName()\":{\"notice\":\"Return the module name as a bytes16.\"},\"install(bytes)\":{\"notice\":\"A module expects to be called via the World contract, and therefore installs itself on its `msg.sender`.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@latticexyz/world/src/interfaces/IModule.sol\":\"IModule\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":3000},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\"]},\"sources\":{\"node_modules/@latticexyz/world/src/interfaces/IModule.sol\":{\"keccak256\":\"0x0c9f5a12f8b27ae6f02b6ca7ccfd7ab1de349e5c4773f99cfab1fd4721bc4a06\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cafb66fbd4b3587121a2f2ff6fc5e4c32796e6469719899e181c3abac1479178\",\"dweb:/ipfs/QmT6GKskhqmLadhuNVVbgDEgJ92jMsCdyLcfrSaiVQeZYf\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.13+commit.abaa5c0e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resourceSelector",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "RequiredModuleNotFound"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getName",
+          "outputs": [
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "args",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "install"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getName()": {
+            "notice": "Return the module name as a bytes16."
+          },
+          "install(bytes)": {
+            "notice": "A module expects to be called via the World contract, and therefore installs itself on its `msg.sender`."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@latticexyz/=node_modules/@latticexyz/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 3000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@latticexyz/world/src/interfaces/IModule.sol": "IModule"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@latticexyz/world/src/interfaces/IModule.sol": {
+        "keccak256": "0x0c9f5a12f8b27ae6f02b6ca7ccfd7ab1de349e5c4773f99cfab1fd4721bc4a06",
+        "urls": [
+          "bzz-raw://cafb66fbd4b3587121a2f2ff6fc5e4c32796e6469719899e181c3abac1479178",
+          "dweb:/ipfs/QmT6GKskhqmLadhuNVVbgDEgJ92jMsCdyLcfrSaiVQeZYf"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@latticexyz/world/src/interfaces/IModule.sol",
+    "id": 94303,
+    "exportedSymbols": {
+      "IModule": [
+        94302
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:390:71",
+    "nodes": [
+      {
+        "id": 94285,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:71",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 94302,
+        "nodeType": "ContractDefinition",
+        "src": "58:363:71",
+        "nodes": [
+          {
+            "id": 94289,
+            "nodeType": "ErrorDefinition",
+            "src": "80:54:71",
+            "nodes": [],
+            "errorSelector": "cc1a6119",
+            "name": "RequiredModuleNotFound",
+            "nameLocation": "86:22:71",
+            "parameters": {
+              "id": 94288,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94287,
+                  "mutability": "mutable",
+                  "name": "resourceSelector",
+                  "nameLocation": "116:16:71",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94289,
+                  "src": "109:23:71",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 94286,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "109:6:71",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "108:25:71"
+            }
+          },
+          {
+            "id": 94295,
+            "nodeType": "FunctionDefinition",
+            "src": "192:56:71",
+            "nodes": [],
+            "documentation": {
+              "id": 94290,
+              "nodeType": "StructuredDocumentation",
+              "src": "138:51:71",
+              "text": " Return the module name as a bytes16."
+            },
+            "functionSelector": "17d7de7c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getName",
+            "nameLocation": "201:7:71",
+            "parameters": {
+              "id": 94291,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "208:2:71"
+            },
+            "returnParameters": {
+              "id": 94294,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94293,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "242:4:71",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94295,
+                  "src": "234:12:71",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes16",
+                    "typeString": "bytes16"
+                  },
+                  "typeName": {
+                    "id": 94292,
+                    "name": "bytes16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "234:7:71",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes16",
+                      "typeString": "bytes16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "233:14:71"
+            },
+            "scope": 94302,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 94301,
+            "nodeType": "FunctionDefinition",
+            "src": "374:45:71",
+            "nodes": [],
+            "documentation": {
+              "id": 94296,
+              "nodeType": "StructuredDocumentation",
+              "src": "252:119:71",
+              "text": " A module expects to be called via the World contract, and therefore installs itself on its `msg.sender`."
+            },
+            "functionSelector": "13861fb5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "install",
+            "nameLocation": "383:7:71",
+            "parameters": {
+              "id": 94299,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94298,
+                  "mutability": "mutable",
+                  "name": "args",
+                  "nameLocation": "404:4:71",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94301,
+                  "src": "391:17:71",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 94297,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "391:5:71",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "390:19:71"
+            },
+            "returnParameters": {
+              "id": 94300,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "418:0:71"
+            },
+            "scope": 94302,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          94302
+        ],
+        "name": "IModule",
+        "nameLocation": "68:7:71",
+        "scope": 94303,
+        "usedErrors": [
+          94289
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 71
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "x",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "y",
+        "type": "uint32"
+      }
+    ],
+    "name": "move",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "x",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "y",
+        "type": "uint32"
+      }
+    ],
+    "name": "spawn",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

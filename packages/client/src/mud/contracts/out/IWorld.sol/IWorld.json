@@ -1,0 +1,3335 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resource",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "AccessDenied",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "functionSelector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "FunctionSelectorExists",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "functionSelector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "FunctionSelectorNotFound",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resource",
+          "type": "string"
+        }
+      ],
+      "name": "InvalidSelector",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "module",
+          "type": "string"
+        }
+      ],
+      "name": "ModuleAlreadyInstalled",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resource",
+          "type": "string"
+        }
+      ],
+      "name": "ResourceExists",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resource",
+          "type": "string"
+        }
+      ],
+      "name": "ResourceNotFound",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "length",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "received",
+          "type": "uint256"
+        }
+      ],
+      "name": "StoreCore_DataIndexOverflow",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "expected",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "received",
+          "type": "uint256"
+        }
+      ],
+      "name": "StoreCore_InvalidDataLength",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "expected",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "received",
+          "type": "uint256"
+        }
+      ],
+      "name": "StoreCore_InvalidFieldNamesLength",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "StoreCore_NotDynamicField",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "StoreCore_NotImplemented",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "tableId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "tableIdString",
+          "type": "string"
+        }
+      ],
+      "name": "StoreCore_TableAlreadyExists",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "tableId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "tableIdString",
+          "type": "string"
+        }
+      ],
+      "name": "StoreCore_TableNotFound",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "system",
+          "type": "address"
+        }
+      ],
+      "name": "SystemExists",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "HelloWorld",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "StoreDeleteRecord",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "StoreEphemeralRecord",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "StoreSetField",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "StoreSetRecord",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes",
+          "name": "funcSelectorAndArgs",
+          "type": "bytes"
+        }
+      ],
+      "name": "call",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "deleteRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "deleteRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "emitEphemeralRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "emitEphemeralRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "flee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        }
+      ],
+      "name": "getField",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "Schema",
+          "name": "schema",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getFieldLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "Schema",
+          "name": "schema",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "start",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "end",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFieldSlice",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getKeySchema",
+      "outputs": [
+        {
+          "internalType": "Schema",
+          "name": "schema",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "Schema",
+          "name": "schema",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getRecord",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "getRecord",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getSchema",
+      "outputs": [
+        {
+          "internalType": "Schema",
+          "name": "schema",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "address",
+          "name": "grantee",
+          "type": "address"
+        }
+      ],
+      "name": "grantAccess",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IModule",
+          "name": "module",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "args",
+          "type": "bytes"
+        }
+      ],
+      "name": "installModule",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IModule",
+          "name": "module",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "args",
+          "type": "bytes"
+        }
+      ],
+      "name": "installRootModule",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isStore",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "x",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "y",
+          "type": "uint32"
+        }
+      ],
+      "name": "move",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "byteLengthToPop",
+          "type": "uint256"
+        }
+      ],
+      "name": "popFromField",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "byteLengthToPop",
+          "type": "uint256"
+        }
+      ],
+      "name": "popFromField",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes",
+          "name": "dataToPush",
+          "type": "bytes"
+        }
+      ],
+      "name": "pushToField",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes",
+          "name": "dataToPush",
+          "type": "bytes"
+        }
+      ],
+      "name": "pushToField",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "string",
+          "name": "systemFunctionName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "systemFunctionArguments",
+          "type": "string"
+        }
+      ],
+      "name": "registerFunctionSelector",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "worldFunctionSelector",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "address",
+          "name": "hook",
+          "type": "address"
+        }
+      ],
+      "name": "registerHook",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        }
+      ],
+      "name": "registerNamespace",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes4",
+          "name": "worldFunctionSelector",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "bytes4",
+          "name": "systemFunctionSelector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "registerRootFunctionSelector",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "Schema",
+          "name": "schema",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "Schema",
+          "name": "keySchema",
+          "type": "bytes32"
+        }
+      ],
+      "name": "registerSchema",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "contract IStoreHook",
+          "name": "hook",
+          "type": "address"
+        }
+      ],
+      "name": "registerStoreHook",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "contract System",
+          "name": "system",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "publicAccess",
+          "type": "bool"
+        }
+      ],
+      "name": "registerSystem",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "resourceSelector",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "contract ISystemHook",
+          "name": "hook",
+          "type": "address"
+        }
+      ],
+      "name": "registerSystemHook",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "Schema",
+          "name": "valueSchema",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "Schema",
+          "name": "keySchema",
+          "type": "bytes32"
+        }
+      ],
+      "name": "registerTable",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "resourceSelector",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "contract IStoreHook",
+          "name": "hook",
+          "type": "address"
+        }
+      ],
+      "name": "registerTableHook",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "address",
+          "name": "grantee",
+          "type": "address"
+        }
+      ],
+      "name": "revokeAccess",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "setField",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "setField",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "string",
+          "name": "tableName",
+          "type": "string"
+        },
+        {
+          "internalType": "string[]",
+          "name": "fieldNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "setMetadata",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "tableName",
+          "type": "string"
+        },
+        {
+          "internalType": "string[]",
+          "name": "fieldNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "setMetadata",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "setRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "setRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "x",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "y",
+          "type": "uint32"
+        }
+      ],
+      "name": "spawn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "throwBall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "table",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startByteIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "dataToSet",
+          "type": "bytes"
+        }
+      ],
+      "name": "updateInField",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "key",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint8",
+          "name": "schemaIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startByteIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "dataToSet",
+          "type": "bytes"
+        }
+      ],
+      "name": "updateInField",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "call(bytes16,bytes16,bytes)": "832f05f4",
+    "deleteRecord(bytes16,bytes16,bytes32[])": "e3f8cc6b",
+    "deleteRecord(bytes32,bytes32[])": "505a181d",
+    "emitEphemeralRecord(bytes16,bytes16,bytes32[],bytes)": "ab7404bb",
+    "emitEphemeralRecord(bytes32,bytes32[],bytes)": "be83698c",
+    "flee()": "48b97ffd",
+    "getField(bytes32,bytes32[],uint8)": "d03edb8c",
+    "getFieldLength(bytes32,bytes32[],uint8,bytes32)": "9f1fcf0a",
+    "getFieldSlice(bytes32,bytes32[],uint8,bytes32,uint256,uint256)": "d3a26b06",
+    "getKeySchema(bytes32)": "d4285dc2",
+    "getRecord(bytes32,bytes32[])": "cc49db7e",
+    "getRecord(bytes32,bytes32[],bytes32)": "419b58fd",
+    "getSchema(bytes32)": "a2ea7c6e",
+    "grantAccess(bytes16,bytes16,address)": "f227e653",
+    "installModule(address,bytes)": "8da798da",
+    "installRootModule(address,bytes)": "af068c9e",
+    "isStore()": "a5c2f007",
+    "move(uint32,uint32)": "16254d8d",
+    "popFromField(bytes16,bytes16,bytes32[],uint8,uint256)": "77841557",
+    "popFromField(bytes32,bytes32[],uint8,uint256)": "8c1f9a54",
+    "pushToField(bytes16,bytes16,bytes32[],uint8,bytes)": "6e627cb8",
+    "pushToField(bytes32,bytes32[],uint8,bytes)": "0c1a6000",
+    "registerFunctionSelector(bytes16,bytes16,string,string)": "ca4c1f5e",
+    "registerHook(bytes16,bytes16,address)": "7a58dce4",
+    "registerNamespace(bytes16)": "a886545e",
+    "registerRootFunctionSelector(bytes16,bytes16,bytes4,bytes4)": "56f55a97",
+    "registerSchema(bytes32,bytes32,bytes32)": "d5933686",
+    "registerStoreHook(bytes32,address)": "6e81fd71",
+    "registerSystem(bytes16,bytes16,address,bool)": "4c9e9f11",
+    "registerSystemHook(bytes16,bytes16,address)": "3ca90f22",
+    "registerTable(bytes16,bytes16,bytes32,bytes32)": "31b99d89",
+    "registerTableHook(bytes16,bytes16,address)": "8ae710e9",
+    "revokeAccess(bytes16,bytes16,address)": "1e42269e",
+    "setField(bytes16,bytes16,bytes32[],uint8,bytes)": "9146e7c8",
+    "setField(bytes32,bytes32[],uint8,bytes)": "114a7266",
+    "setMetadata(bytes16,bytes16,string,string[])": "096fcaa9",
+    "setMetadata(bytes32,string,string[])": "fe86a89f",
+    "setRecord(bytes16,bytes16,bytes32[],bytes)": "11c73ffb",
+    "setRecord(bytes32,bytes32[],bytes)": "8ed41f2f",
+    "spawn(uint32,uint32)": "a3a8e72d",
+    "throwBall()": "a4aaac64",
+    "updateInField(bytes16,bytes16,bytes32[],uint8,uint256,bytes)": "d491953a",
+    "updateInField(bytes32,bytes32[],uint8,uint256,bytes)": "776d4047"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resource\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"AccessDenied\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"functionSelector\",\"type\":\"bytes4\"}],\"name\":\"FunctionSelectorExists\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"functionSelector\",\"type\":\"bytes4\"}],\"name\":\"FunctionSelectorNotFound\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resource\",\"type\":\"string\"}],\"name\":\"InvalidSelector\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"module\",\"type\":\"string\"}],\"name\":\"ModuleAlreadyInstalled\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resource\",\"type\":\"string\"}],\"name\":\"ResourceExists\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resource\",\"type\":\"string\"}],\"name\":\"ResourceNotFound\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"length\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"received\",\"type\":\"uint256\"}],\"name\":\"StoreCore_DataIndexOverflow\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"expected\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"received\",\"type\":\"uint256\"}],\"name\":\"StoreCore_InvalidDataLength\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"expected\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"received\",\"type\":\"uint256\"}],\"name\":\"StoreCore_InvalidFieldNamesLength\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"StoreCore_NotDynamicField\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"StoreCore_NotImplemented\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"tableId\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"tableIdString\",\"type\":\"string\"}],\"name\":\"StoreCore_TableAlreadyExists\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"tableId\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"tableIdString\",\"type\":\"string\"}],\"name\":\"StoreCore_TableNotFound\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"system\",\"type\":\"address\"}],\"name\":\"SystemExists\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"HelloWorld\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"}],\"name\":\"StoreDeleteRecord\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"StoreEphemeralRecord\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"StoreSetField\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"StoreSetRecord\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes\",\"name\":\"funcSelectorAndArgs\",\"type\":\"bytes\"}],\"name\":\"call\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"}],\"name\":\"deleteRecord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"}],\"name\":\"deleteRecord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"emitEphemeralRecord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"emitEphemeralRecord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"flee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"}],\"name\":\"getField\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"Schema\",\"name\":\"schema\",\"type\":\"bytes32\"}],\"name\":\"getFieldLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"Schema\",\"name\":\"schema\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"start\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"end\",\"type\":\"uint256\"}],\"name\":\"getFieldSlice\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"}],\"name\":\"getKeySchema\",\"outputs\":[{\"internalType\":\"Schema\",\"name\":\"schema\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"Schema\",\"name\":\"schema\",\"type\":\"bytes32\"}],\"name\":\"getRecord\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"}],\"name\":\"getRecord\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"}],\"name\":\"getSchema\",\"outputs\":[{\"internalType\":\"Schema\",\"name\":\"schema\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"address\",\"name\":\"grantee\",\"type\":\"address\"}],\"name\":\"grantAccess\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IModule\",\"name\":\"module\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"args\",\"type\":\"bytes\"}],\"name\":\"installModule\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IModule\",\"name\":\"module\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"args\",\"type\":\"bytes\"}],\"name\":\"installRootModule\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isStore\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"x\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"y\",\"type\":\"uint32\"}],\"name\":\"move\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"byteLengthToPop\",\"type\":\"uint256\"}],\"name\":\"popFromField\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"byteLengthToPop\",\"type\":\"uint256\"}],\"name\":\"popFromField\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"dataToPush\",\"type\":\"bytes\"}],\"name\":\"pushToField\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"dataToPush\",\"type\":\"bytes\"}],\"name\":\"pushToField\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"string\",\"name\":\"systemFunctionName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"systemFunctionArguments\",\"type\":\"string\"}],\"name\":\"registerFunctionSelector\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"worldFunctionSelector\",\"type\":\"bytes4\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"address\",\"name\":\"hook\",\"type\":\"address\"}],\"name\":\"registerHook\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"}],\"name\":\"registerNamespace\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes4\",\"name\":\"worldFunctionSelector\",\"type\":\"bytes4\"},{\"internalType\":\"bytes4\",\"name\":\"systemFunctionSelector\",\"type\":\"bytes4\"}],\"name\":\"registerRootFunctionSelector\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"Schema\",\"name\":\"schema\",\"type\":\"bytes32\"},{\"internalType\":\"Schema\",\"name\":\"keySchema\",\"type\":\"bytes32\"}],\"name\":\"registerSchema\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"contract IStoreHook\",\"name\":\"hook\",\"type\":\"address\"}],\"name\":\"registerStoreHook\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"contract System\",\"name\":\"system\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"publicAccess\",\"type\":\"bool\"}],\"name\":\"registerSystem\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"resourceSelector\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"contract ISystemHook\",\"name\":\"hook\",\"type\":\"address\"}],\"name\":\"registerSystemHook\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"Schema\",\"name\":\"valueSchema\",\"type\":\"bytes32\"},{\"internalType\":\"Schema\",\"name\":\"keySchema\",\"type\":\"bytes32\"}],\"name\":\"registerTable\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"resourceSelector\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"contract IStoreHook\",\"name\":\"hook\",\"type\":\"address\"}],\"name\":\"registerTableHook\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"address\",\"name\":\"grantee\",\"type\":\"address\"}],\"name\":\"revokeAccess\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"setField\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"setField\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"string\",\"name\":\"tableName\",\"type\":\"string\"},{\"internalType\":\"string[]\",\"name\":\"fieldNames\",\"type\":\"string[]\"}],\"name\":\"setMetadata\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"tableName\",\"type\":\"string\"},{\"internalType\":\"string[]\",\"name\":\"fieldNames\",\"type\":\"string[]\"}],\"name\":\"setMetadata\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"setRecord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"setRecord\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"x\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"y\",\"type\":\"uint32\"}],\"name\":\"spawn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"throwBall\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"table\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"startByteIndex\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"dataToSet\",\"type\":\"bytes\"}],\"name\":\"updateInField\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"bytes32[]\",\"name\":\"key\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint8\",\"name\":\"schemaIndex\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"startByteIndex\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"dataToSet\",\"type\":\"bytes\"}],\"name\":\"updateInField\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"call(bytes16,bytes16,bytes)\":{\"notice\":\"Call the system at the given namespace and name. If the system is not public, the caller must have access to the namespace or name.\"},\"deleteRecord(bytes16,bytes16,bytes32[])\":{\"notice\":\"Delete a record in the table at the given namespace and name. Requires the caller to have access to the namespace or name.\"},\"installRootModule(address,bytes)\":{\"notice\":\"Install the given root module in the World. Requires the caller to own the root namespace. The module is delegatecalled and installed in the root namespace.\"},\"popFromField(bytes16,bytes16,bytes32[],uint8,uint256)\":{\"notice\":\"Pop data from the end of a field in the table at the given namespace and name. Requires the caller to have access to the namespace or name.\"},\"pushToField(bytes16,bytes16,bytes32[],uint8,bytes)\":{\"notice\":\"Push data to the end of a field in the table at the given namespace and name. Requires the caller to have access to the namespace or name.\"},\"setField(bytes16,bytes16,bytes32[],uint8,bytes)\":{\"notice\":\"Write a field in the table at the given namespace and name. Requires the caller to have access to the namespace or name.\"},\"setRecord(bytes16,bytes16,bytes32[],bytes)\":{\"notice\":\"Write a record in the table at the given namespace and name. Requires the caller to have access to the namespace or name.\"},\"updateInField(bytes16,bytes16,bytes32[],uint8,uint256,bytes)\":{\"notice\":\"Update data at `startByteIndex` of a field in the table at the given namespace and name. Requires the caller to have access to the namespace or name.\"}},\"notice\":\"The IWorld interface includes all systems dynamically added to the World during the deploy process.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/codegen/world/IWorld.sol\":\"IWorld\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":3000},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\"]},\"sources\":{\"node_modules/@latticexyz/schema-type/src/solidity/SchemaType.sol\":{\"keccak256\":\"0xe881f296ba0fe410faa6395ee4a65b9bf154947aebc6aa323d41a0484504221e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ba7f706464d14365ff751936ba96f79f200df7bcd9d9f8abccd0b41387ca7967\",\"dweb:/ipfs/QmTiHgH3ZM2oJoqsbNs3iwwPFNYFNU7m8co87woxRLaUZ6\"]},\"node_modules/@latticexyz/store/src/Bytes.sol\":{\"keccak256\":\"0xdfcc270654744ea06ff29bf4f608db9f2279685ee14c4ded90815fb478ba6d1f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e78669b369089f28826893e9738a1060af3ad5917b6954b20b723945e0d1d47a\",\"dweb:/ipfs/QmQhnwV2TMbdaCgNjUvgWn4qQQCggRQZv3TLynVRRtgr2o\"]},\"node_modules/@latticexyz/store/src/IStore.sol\":{\"keccak256\":\"0xd9bdb90c4f9b19380e3a348bc9f6333c07496df01fa452a6e93b930f830087b6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://eefbdbfaa5f7173b58d4c447ca64ede31b73591d8fec64a38be53c7bdfcd6163\",\"dweb:/ipfs/QmdxQxfdpUSf6xkQ5z2qLGaphinBH6wVNbRRBLbo88r6Zs\"]},\"node_modules/@latticexyz/store/src/IStoreErrors.sol\":{\"keccak256\":\"0xc001ac6dca3e41389da8d6e4a7305e84f70d5df9fd631a72b974b6fc44fb753a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://989b7e7146c5bfbf7468b7dea0432c3119a033a337702d7c063ac09654eb5f43\",\"dweb:/ipfs/QmVcTf9YNPb8QhZtU3WTSjezX1XvKRVTRiXGcqqMH8LD7T\"]},\"node_modules/@latticexyz/store/src/Memory.sol\":{\"keccak256\":\"0x706d0d1ddd874bdcd4f73422721420b32939c1c96d4718db8b1b8e9f78bfa76c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ed8c858fa9c3756cb70cb92bb860e0ae6429eb62551b502fb4a883e1344eb42\",\"dweb:/ipfs/QmezLAADZmFj8bKS9dccTQYHcpy4g8PSZ75AuvppSwjrW7\"]},\"node_modules/@latticexyz/store/src/PackedCounter.sol\":{\"keccak256\":\"0x09e48063f57cee0a723812f0e8e7e95622064d8d6b7e238d634efb21738c7b85\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ef32c0c6bf7956bed5f7c1da0362e2fa725882d9163e8b2113e8019ec1bcc8ed\",\"dweb:/ipfs/QmRrqWrH3f14yHn9NTUFpLkCAHrcfVZCJHPREySHMdaBiH\"]},\"node_modules/@latticexyz/store/src/Schema.sol\":{\"keccak256\":\"0xe5329478d0a81014cd4a07f482a4929e32b7086dbbed3c7b6affd9fb6162a950\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e0b4481576081fd47a0d82294d7024b3103571f4b11282123a2e2a58540a1af4\",\"dweb:/ipfs/QmdKTreXa3gqhi92NvVBqvs3uPasA9RvgzvUj4LWte5uMZ\"]},\"node_modules/@latticexyz/store/src/Slice.sol\":{\"keccak256\":\"0x14879c6c859cad89451616dcee1ab6222fd565849809b89407de48f0c1a01133\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://924caa18aa0e656a295da626d586dfb120bbea321123010462b0640c7e0c52c4\",\"dweb:/ipfs/QmNueqwy4g5mwq9kXaPzue8X2mqyFjH2P2AFi3pNN3WTAt\"]},\"node_modules/@latticexyz/store/src/Storage.sol\":{\"keccak256\":\"0x2ccca6556a3c2595479914d30efa84fc3b61cff30036522714a0ef99289ee2af\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9d169812a4159454be580d42fedee63d121646102e6462fe3b2ea905b69bee07\",\"dweb:/ipfs/QmXiKsMeN4nsdiqDwhuWfb4J3UF57B4rkuwkfbrRXA6vtb\"]},\"node_modules/@latticexyz/store/src/StoreCore.sol\":{\"keccak256\":\"0xb4d4436c78cde88619f842be3c0d1770c45ad5f1523887e8236180b231fadb57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c13ff54ec101fb9fd2463d3894fa1dfbed680986963864e7204b207221519c55\",\"dweb:/ipfs/QmTW62YAqHRPPnKGcV8vZR875XzAJbvD8ey4AtoS36eC1x\"]},\"node_modules/@latticexyz/store/src/StoreSwitch.sol\":{\"keccak256\":\"0x012199fd51d775d6a3dba1cd0b02379e25f0a53f96dd7c7abf4bbfaa571b27bc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d67579506893f72839108cdb092ddafc293cc378e723d529996f577034842e31\",\"dweb:/ipfs/QmbEQbaxpegizVk8tA5gmo2DF7J84kEMpGrgdGzwKecyWH\"]},\"node_modules/@latticexyz/store/src/TableId.sol\":{\"keccak256\":\"0x8c55662dc4f66be577bb96bfdcb65d95fe1323c733443ab749cb9ec1e58f0a6e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://209ed70247c1c64b56d9b21f2902e67e0994cb89ac19be8e1553dac9d978fb76\",\"dweb:/ipfs/QmVLYNDwBL3GZidDpwqFZx916zoGZ5tWVztxKQFEEzVybP\"]},\"node_modules/@latticexyz/store/src/Utils.sol\":{\"keccak256\":\"0x426216bfa1c0e70640787007a6e39257cf09e586fd04831ea4fb3dd9c5768fc4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://38e657fa9cfaebe39477eaff27d1ad4d7eeaf0c0058539d2ec7e6976d93df4f4\",\"dweb:/ipfs/QmRuaxqRjUrHHC2ZyTnpmq6sfrWGCDh91B6F5chFAToU6U\"]},\"node_modules/@latticexyz/store/src/codegen/Tables.sol\":{\"keccak256\":\"0x2eba8dd4e9f07b505438a2fb744ac7da26b1f6321b8a88054e9442db947ab435\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bd1a60dfff209a3f1df84aeb5d7f8a5cf0419c19be63bac428df0a779d5ba437\",\"dweb:/ipfs/QmaHem2GMJPHrtr1f7fk1ThTBESdYipmBxEEoKT1DBRmsd\"]},\"node_modules/@latticexyz/store/src/codegen/tables/Callbacks.sol\":{\"keccak256\":\"0x17506500e0fdd4bd3492a09e4f536b05757ae605751e0a5278e8e3ac0f1a5b84\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d36cbe9eb1895ac3a88ad9366d8d4de10e154e8b4fbb70a3f0c959888a089be1\",\"dweb:/ipfs/QmcgnjXefmKQs2diUfxRubovVQvoqjP84JXnn6YqtbR3pn\"]},\"node_modules/@latticexyz/store/src/codegen/tables/Hooks.sol\":{\"keccak256\":\"0xcc32a9d83cc79d3ab398c8b9181c56b24d9cceac7fb7435720e3d6c82318b190\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e1ed26494bf9695c455e7a54e224f76feb5f643c041a4ffb43091c6705e5d4d5\",\"dweb:/ipfs/QmTuKASQqPkK8x9tLVKW6G8VzD665xqTZV8YF1EwodYazx\"]},\"node_modules/@latticexyz/store/src/codegen/tables/Mixed.sol\":{\"keccak256\":\"0x212891acd187755e79b73bac2370f869e7c3c9f9c6ad5ee2e7a578fe79322814\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e199a05d6e8e0b2735277b1f8d34c1977bfbe7564786ec172596bdfc309b2c76\",\"dweb:/ipfs/QmeeXPr2kiKHAXrxmK4cZnpRDDJC4cDrb73tj69Z79XuUb\"]},\"node_modules/@latticexyz/store/src/codegen/tables/StoreMetadata.sol\":{\"keccak256\":\"0x360cc0f613011df7d7e1dc4ef5648a17cdec9574df0c01dfbce9b5ef68556975\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://17c9bbcdb1affddf1031c1f850b82a06e7e90b368919e41ac4be8756537bbc1c\",\"dweb:/ipfs/QmcJ4Nk3gWToADf1hD2A5agByGVU3DwxBJk5jQY58jL2jw\"]},\"node_modules/@latticexyz/store/src/codegen/tables/Vector2.sol\":{\"keccak256\":\"0xfcd9fda67bc9c5ea55866f08f53e091b6a8ba8627da6710b8864c1fee1b97e16\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4c92456f8b7186b9401c26471148e6e048cfaedc81f2703e929011639d3843ae\",\"dweb:/ipfs/Qmf65ygAksGN51dpeJuFcBbcppaJFPARPwqnEU5JUFPgkm\"]},\"node_modules/@latticexyz/store/src/tightcoder/DecodeSlice.sol\":{\"keccak256\":\"0xe760dfb8ff20cfb44eee6a5f03ac84abbc91382fca2e36c88c92046e6b3a66e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://75eb4b355c547ffee62031d8dfb80844fa31fa4460543a088278083662dc4c12\",\"dweb:/ipfs/Qmf8sRcrjJ6hEQ8TPwwe6KcXcE2MPw7Juvf7fKBZ1fBCt6\"]},\"node_modules/@latticexyz/store/src/tightcoder/EncodeArray.sol\":{\"keccak256\":\"0x046f0a2dc543c7a80be91ff26b19990a10fbe73cb605f4944af38e04326a43df\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d94f038e70179571d2aed3cbe03e812ce79a471372171fb78e8189bebd7ae1ac\",\"dweb:/ipfs/QmUV4bkaEc8hefLpLRaGwmu4WZsqRLE9e6R8UdaKPExb6p\"]},\"node_modules/@latticexyz/store/src/tightcoder/TightCoder.sol\":{\"keccak256\":\"0xff0278a4e35174bbed8a38dad8ae7506f725bfe95f0b7c13829c353d68dd25dc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://26249ec0c2fa3a3430a2f8edbfc5cd678e34ea1cf1d7490ecaf1e925c976eb85\",\"dweb:/ipfs/QmUpkhr5kFiDKc7rZ2z5HcTf5PkrWVJu5sa31tYv911cPL\"]},\"node_modules/@latticexyz/world/src/System.sol\":{\"keccak256\":\"0xf1342c8461adb4c5821c1ca106a67ba34402b36265fa63bf766eed937bd92bf9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ea41f96a27a26d56d62824e007b3b0234d44fcd94361e5c8f40fdb334cbf444b\",\"dweb:/ipfs/QmRfj4iS5Lu9V4e47wsPQy4op1qQ6hqaJpERLB5EyzqW38\"]},\"node_modules/@latticexyz/world/src/WorldContext.sol\":{\"keccak256\":\"0xd44a445ff07ac1551e5a8f17450381664ecf68dcb1c89fee8fb11b9b73c9cd7b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1235cc5636743b9afbb313676fc4c84ac5607142c758b0bfc59107aff79ed30c\",\"dweb:/ipfs/QmUtTUFjxKy7GtQC1Uzn6B2bRNZpcASFySPDjd16T47Rcz\"]},\"node_modules/@latticexyz/world/src/interfaces/IAccessManagementSystem.sol\":{\"keccak256\":\"0xba4f728be36df11f4a988b61a577998d45da89314e26dcfa139e465840cef116\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0226026036fed756d36bde2f2fa9f8ad0ab21595a82740500d187e84a87e5a11\",\"dweb:/ipfs/QmZu2MPVGWvfP59KeKPzJXNt5pd5sqyVqFS1YYANocYsmG\"]},\"node_modules/@latticexyz/world/src/interfaces/IBaseWorld.sol\":{\"keccak256\":\"0x9fd7cfdb1e01e7c11c13051db19a3a15699d7d3159e568abc6a75ea02958d5c3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ac2746e4ce755c0bd3c3d5848c9d4b100606bf558242ee39238c24f1565adebe\",\"dweb:/ipfs/QmScDi6taecyeUuvrXKdzRXQGxajda3Jt4eg4JeBfR6Ns2\"]},\"node_modules/@latticexyz/world/src/interfaces/ICoreSystem.sol\":{\"keccak256\":\"0x21e72828243fbf26d21594a423e9a32e86df07d3e435ea216a27c326546df106\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e8ac8c4b2cdeddaf458e562e3f236a5c798664443eca1658038540d5585ee090\",\"dweb:/ipfs/QmPbh7JmBcxqJV4YP78zVXpsmCSGnSN6g7M27MTkyUjRgG\"]},\"node_modules/@latticexyz/world/src/interfaces/IEphemeralRecordSystem.sol\":{\"keccak256\":\"0xd521b7a1ca533ca9071a131ab1fc38762e268c19aefd68095beb6941cfca4802\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8f433b49223f25c48f607fd068a4104ddacc8aac1c1984caae4631417b4aa1ab\",\"dweb:/ipfs/QmXzm9Q33finw6ztLbWzDSxAwEJpVhJQS4mk6MwxePRy5C\"]},\"node_modules/@latticexyz/world/src/interfaces/IModule.sol\":{\"keccak256\":\"0x0c9f5a12f8b27ae6f02b6ca7ccfd7ab1de349e5c4773f99cfab1fd4721bc4a06\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cafb66fbd4b3587121a2f2ff6fc5e4c32796e6469719899e181c3abac1479178\",\"dweb:/ipfs/QmT6GKskhqmLadhuNVVbgDEgJ92jMsCdyLcfrSaiVQeZYf\"]},\"node_modules/@latticexyz/world/src/interfaces/IModuleInstallationSystem.sol\":{\"keccak256\":\"0x77b05ecc98755a3b48f0296af3146486890d140eff7b1cc6e95be95a6aab80c0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://684155a7539c00796d2e00c3d67dc8d9c5e707e3fac37089df84a346607efdc2\",\"dweb:/ipfs/QmeAPVzvTmaiHBtvFVw92XNmWmQ63RqWAgzNqBGRYwyzkz\"]},\"node_modules/@latticexyz/world/src/interfaces/ISystemHook.sol\":{\"keccak256\":\"0x1dc2adc81b6e82cd5c1040f5885b2b762647166ff1114ee0c79cd478bd8ce5da\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://77e5f86a4cf46f35d4514c9c3a8f47dfa359d8a7fbf726636010296e6955a1f0\",\"dweb:/ipfs/QmPePQhXzCnF4kmTvjcQwwJQZuNPuvnEtkJKccrvRErG6B\"]},\"node_modules/@latticexyz/world/src/interfaces/IWorldErrors.sol\":{\"keccak256\":\"0x214a9f68915fb01baad4a4ca2c65545d26e481fc14b0ceadb9e4f378c4eec08a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://54b93db1cb7d5212d54fe776587d5ceddf56ab276cc72c969f28604bddb8b665\",\"dweb:/ipfs/QmSQJ82HRvBaknXWnwXWNYJj9EHuaiBCPe7W9C9uwyUNCW\"]},\"node_modules/@latticexyz/world/src/interfaces/IWorldKernel.sol\":{\"keccak256\":\"0x35463c5500c73afa16f8b4bb4924825844f1c4e7207f0cb42017993dee09a1c5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a19d3d6d604e3cdb849265daa5f1c9372739e135ecdc3c013f3fc51ca7240539\",\"dweb:/ipfs/QmY1YPEu4GcN6s8XNz3UZMoFiV3aDtYo8SR5SGK4AUyKj1\"]},\"node_modules/@latticexyz/world/src/interfaces/IWorldRegistrationSystem.sol\":{\"keccak256\":\"0x879d17c5f951b615e18646e55501bd63eff6eee4827041d7cced474ce372cd68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3a657845d1e063f4fd39617b1db90614d95b6ab08a77a29670c3c7e086537f55\",\"dweb:/ipfs/QmdMbx7d8hvtUgtj7BhKPrqAGuhBj5LbMz1uAccLRRRb4B\"]},\"node_modules/forge-std/src/console.sol\":{\"keccak256\":\"0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70\",\"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec\"]},\"src/codegen/world/IEncounterSystem.sol\":{\"keccak256\":\"0xd703b6a1da88b2cd0137c8bc5d5d53739f38a5a96de300f0c151c0bf2993448a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3654385ffa0bc28a6b718b37adfe3a218fbe6132c832ce6ba166be53aed74ef7\",\"dweb:/ipfs/QmSbz3C7xGWDAQjogG8ihvLmaewh169xSPYXfB4hnKjPhE\"]},\"src/codegen/world/IMapSystem.sol\":{\"keccak256\":\"0x4152659702bc713154abd4987de79dd1c439500ca9d566fa7f93bd34b5830cb4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4864b9ae1416da0dc18d257ca1dfaf00bc7a8011419c55fb163e2010af1a86f5\",\"dweb:/ipfs/QmRUYsJxxL2athAaoFL7TWJ61TgFEFWB8JS6CnxyAjV49S\"]},\"src/codegen/world/IWorld.sol\":{\"keccak256\":\"0x20753fb6abe06d2e820a9cf90ce21213f0267534f74d844c0e4861a2ec132e70\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://98f51676496ab815ff7d17e7a5293d88b08612c9b02fa65079ea1c38e3d2cdaa\",\"dweb:/ipfs/QmYwMLP4BLKnkjKcWHYxqtgAo9B8T1EUVSj4CgY8jXqpcD\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.13+commit.abaa5c0e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resource",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "AccessDenied"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "functionSelector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "FunctionSelectorExists"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "functionSelector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "FunctionSelectorNotFound"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resource",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "InvalidSelector"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "module",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "ModuleAlreadyInstalled"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resource",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "ResourceExists"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resource",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "ResourceNotFound"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "length",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "received",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "StoreCore_DataIndexOverflow"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "expected",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "received",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "StoreCore_InvalidDataLength"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "expected",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "received",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "StoreCore_InvalidFieldNamesLength"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "StoreCore_NotDynamicField"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "StoreCore_NotImplemented"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "tableId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "string",
+              "name": "tableIdString",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "StoreCore_TableAlreadyExists"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "tableId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "string",
+              "name": "tableIdString",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "StoreCore_TableNotFound"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "system",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "SystemExists"
+        },
+        {
+          "inputs": [],
+          "type": "event",
+          "name": "HelloWorld",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "StoreDeleteRecord",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "StoreEphemeralRecord",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]",
+              "indexed": false
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "StoreSetField",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "StoreSetRecord",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes",
+              "name": "funcSelectorAndArgs",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "call",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deleteRecord"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deleteRecord"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "emitEphemeralRecord"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "emitEphemeralRecord"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "flee"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getField",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "Schema",
+              "name": "schema",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFieldLength",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "Schema",
+              "name": "schema",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "start",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "end",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFieldSlice",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getKeySchema",
+          "outputs": [
+            {
+              "internalType": "Schema",
+              "name": "schema",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "Schema",
+              "name": "schema",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getRecord",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getRecord",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getSchema",
+          "outputs": [
+            {
+              "internalType": "Schema",
+              "name": "schema",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "address",
+              "name": "grantee",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "grantAccess"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IModule",
+              "name": "module",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "args",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "installModule"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IModule",
+              "name": "module",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "args",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "installRootModule"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isStore"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "x",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "y",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "move"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "byteLengthToPop",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "popFromField"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "byteLengthToPop",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "popFromField"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "dataToPush",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "pushToField"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "dataToPush",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "pushToField"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "string",
+              "name": "systemFunctionName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "systemFunctionArguments",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerFunctionSelector",
+          "outputs": [
+            {
+              "internalType": "bytes4",
+              "name": "worldFunctionSelector",
+              "type": "bytes4"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "address",
+              "name": "hook",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerHook"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerNamespace"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes4",
+              "name": "worldFunctionSelector",
+              "type": "bytes4"
+            },
+            {
+              "internalType": "bytes4",
+              "name": "systemFunctionSelector",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerRootFunctionSelector",
+          "outputs": [
+            {
+              "internalType": "bytes4",
+              "name": "",
+              "type": "bytes4"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "Schema",
+              "name": "schema",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "Schema",
+              "name": "keySchema",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerSchema"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "contract IStoreHook",
+              "name": "hook",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerStoreHook"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "contract System",
+              "name": "system",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "publicAccess",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerSystem",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "resourceSelector",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "contract ISystemHook",
+              "name": "hook",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerSystemHook"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "Schema",
+              "name": "valueSchema",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "Schema",
+              "name": "keySchema",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerTable",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "resourceSelector",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "contract IStoreHook",
+              "name": "hook",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerTableHook"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "address",
+              "name": "grantee",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "revokeAccess"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setField"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setField"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "string",
+              "name": "tableName",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "fieldNames",
+              "type": "string[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMetadata"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "string",
+              "name": "tableName",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "fieldNames",
+              "type": "string[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMetadata"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setRecord"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setRecord"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "x",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "y",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "spawn"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "throwBall"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "table",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "startByteIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "dataToSet",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "updateInField"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "key",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint8",
+              "name": "schemaIndex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "startByteIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "dataToSet",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "updateInField"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "call(bytes16,bytes16,bytes)": {
+            "notice": "Call the system at the given namespace and name. If the system is not public, the caller must have access to the namespace or name."
+          },
+          "deleteRecord(bytes16,bytes16,bytes32[])": {
+            "notice": "Delete a record in the table at the given namespace and name. Requires the caller to have access to the namespace or name."
+          },
+          "installRootModule(address,bytes)": {
+            "notice": "Install the given root module in the World. Requires the caller to own the root namespace. The module is delegatecalled and installed in the root namespace."
+          },
+          "popFromField(bytes16,bytes16,bytes32[],uint8,uint256)": {
+            "notice": "Pop data from the end of a field in the table at the given namespace and name. Requires the caller to have access to the namespace or name."
+          },
+          "pushToField(bytes16,bytes16,bytes32[],uint8,bytes)": {
+            "notice": "Push data to the end of a field in the table at the given namespace and name. Requires the caller to have access to the namespace or name."
+          },
+          "setField(bytes16,bytes16,bytes32[],uint8,bytes)": {
+            "notice": "Write a field in the table at the given namespace and name. Requires the caller to have access to the namespace or name."
+          },
+          "setRecord(bytes16,bytes16,bytes32[],bytes)": {
+            "notice": "Write a record in the table at the given namespace and name. Requires the caller to have access to the namespace or name."
+          },
+          "updateInField(bytes16,bytes16,bytes32[],uint8,uint256,bytes)": {
+            "notice": "Update data at `startByteIndex` of a field in the table at the given namespace and name. Requires the caller to have access to the namespace or name."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@latticexyz/=node_modules/@latticexyz/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 3000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/codegen/world/IWorld.sol": "IWorld"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@latticexyz/schema-type/src/solidity/SchemaType.sol": {
+        "keccak256": "0xe881f296ba0fe410faa6395ee4a65b9bf154947aebc6aa323d41a0484504221e",
+        "urls": [
+          "bzz-raw://ba7f706464d14365ff751936ba96f79f200df7bcd9d9f8abccd0b41387ca7967",
+          "dweb:/ipfs/QmTiHgH3ZM2oJoqsbNs3iwwPFNYFNU7m8co87woxRLaUZ6"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/Bytes.sol": {
+        "keccak256": "0xdfcc270654744ea06ff29bf4f608db9f2279685ee14c4ded90815fb478ba6d1f",
+        "urls": [
+          "bzz-raw://e78669b369089f28826893e9738a1060af3ad5917b6954b20b723945e0d1d47a",
+          "dweb:/ipfs/QmQhnwV2TMbdaCgNjUvgWn4qQQCggRQZv3TLynVRRtgr2o"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/IStore.sol": {
+        "keccak256": "0xd9bdb90c4f9b19380e3a348bc9f6333c07496df01fa452a6e93b930f830087b6",
+        "urls": [
+          "bzz-raw://eefbdbfaa5f7173b58d4c447ca64ede31b73591d8fec64a38be53c7bdfcd6163",
+          "dweb:/ipfs/QmdxQxfdpUSf6xkQ5z2qLGaphinBH6wVNbRRBLbo88r6Zs"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/IStoreErrors.sol": {
+        "keccak256": "0xc001ac6dca3e41389da8d6e4a7305e84f70d5df9fd631a72b974b6fc44fb753a",
+        "urls": [
+          "bzz-raw://989b7e7146c5bfbf7468b7dea0432c3119a033a337702d7c063ac09654eb5f43",
+          "dweb:/ipfs/QmVcTf9YNPb8QhZtU3WTSjezX1XvKRVTRiXGcqqMH8LD7T"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/Memory.sol": {
+        "keccak256": "0x706d0d1ddd874bdcd4f73422721420b32939c1c96d4718db8b1b8e9f78bfa76c",
+        "urls": [
+          "bzz-raw://2ed8c858fa9c3756cb70cb92bb860e0ae6429eb62551b502fb4a883e1344eb42",
+          "dweb:/ipfs/QmezLAADZmFj8bKS9dccTQYHcpy4g8PSZ75AuvppSwjrW7"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/PackedCounter.sol": {
+        "keccak256": "0x09e48063f57cee0a723812f0e8e7e95622064d8d6b7e238d634efb21738c7b85",
+        "urls": [
+          "bzz-raw://ef32c0c6bf7956bed5f7c1da0362e2fa725882d9163e8b2113e8019ec1bcc8ed",
+          "dweb:/ipfs/QmRrqWrH3f14yHn9NTUFpLkCAHrcfVZCJHPREySHMdaBiH"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/Schema.sol": {
+        "keccak256": "0xe5329478d0a81014cd4a07f482a4929e32b7086dbbed3c7b6affd9fb6162a950",
+        "urls": [
+          "bzz-raw://e0b4481576081fd47a0d82294d7024b3103571f4b11282123a2e2a58540a1af4",
+          "dweb:/ipfs/QmdKTreXa3gqhi92NvVBqvs3uPasA9RvgzvUj4LWte5uMZ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/Slice.sol": {
+        "keccak256": "0x14879c6c859cad89451616dcee1ab6222fd565849809b89407de48f0c1a01133",
+        "urls": [
+          "bzz-raw://924caa18aa0e656a295da626d586dfb120bbea321123010462b0640c7e0c52c4",
+          "dweb:/ipfs/QmNueqwy4g5mwq9kXaPzue8X2mqyFjH2P2AFi3pNN3WTAt"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/Storage.sol": {
+        "keccak256": "0x2ccca6556a3c2595479914d30efa84fc3b61cff30036522714a0ef99289ee2af",
+        "urls": [
+          "bzz-raw://9d169812a4159454be580d42fedee63d121646102e6462fe3b2ea905b69bee07",
+          "dweb:/ipfs/QmXiKsMeN4nsdiqDwhuWfb4J3UF57B4rkuwkfbrRXA6vtb"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/StoreCore.sol": {
+        "keccak256": "0xb4d4436c78cde88619f842be3c0d1770c45ad5f1523887e8236180b231fadb57",
+        "urls": [
+          "bzz-raw://c13ff54ec101fb9fd2463d3894fa1dfbed680986963864e7204b207221519c55",
+          "dweb:/ipfs/QmTW62YAqHRPPnKGcV8vZR875XzAJbvD8ey4AtoS36eC1x"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/StoreSwitch.sol": {
+        "keccak256": "0x012199fd51d775d6a3dba1cd0b02379e25f0a53f96dd7c7abf4bbfaa571b27bc",
+        "urls": [
+          "bzz-raw://d67579506893f72839108cdb092ddafc293cc378e723d529996f577034842e31",
+          "dweb:/ipfs/QmbEQbaxpegizVk8tA5gmo2DF7J84kEMpGrgdGzwKecyWH"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/TableId.sol": {
+        "keccak256": "0x8c55662dc4f66be577bb96bfdcb65d95fe1323c733443ab749cb9ec1e58f0a6e",
+        "urls": [
+          "bzz-raw://209ed70247c1c64b56d9b21f2902e67e0994cb89ac19be8e1553dac9d978fb76",
+          "dweb:/ipfs/QmVLYNDwBL3GZidDpwqFZx916zoGZ5tWVztxKQFEEzVybP"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/Utils.sol": {
+        "keccak256": "0x426216bfa1c0e70640787007a6e39257cf09e586fd04831ea4fb3dd9c5768fc4",
+        "urls": [
+          "bzz-raw://38e657fa9cfaebe39477eaff27d1ad4d7eeaf0c0058539d2ec7e6976d93df4f4",
+          "dweb:/ipfs/QmRuaxqRjUrHHC2ZyTnpmq6sfrWGCDh91B6F5chFAToU6U"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/codegen/Tables.sol": {
+        "keccak256": "0x2eba8dd4e9f07b505438a2fb744ac7da26b1f6321b8a88054e9442db947ab435",
+        "urls": [
+          "bzz-raw://bd1a60dfff209a3f1df84aeb5d7f8a5cf0419c19be63bac428df0a779d5ba437",
+          "dweb:/ipfs/QmaHem2GMJPHrtr1f7fk1ThTBESdYipmBxEEoKT1DBRmsd"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/codegen/tables/Callbacks.sol": {
+        "keccak256": "0x17506500e0fdd4bd3492a09e4f536b05757ae605751e0a5278e8e3ac0f1a5b84",
+        "urls": [
+          "bzz-raw://d36cbe9eb1895ac3a88ad9366d8d4de10e154e8b4fbb70a3f0c959888a089be1",
+          "dweb:/ipfs/QmcgnjXefmKQs2diUfxRubovVQvoqjP84JXnn6YqtbR3pn"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/codegen/tables/Hooks.sol": {
+        "keccak256": "0xcc32a9d83cc79d3ab398c8b9181c56b24d9cceac7fb7435720e3d6c82318b190",
+        "urls": [
+          "bzz-raw://e1ed26494bf9695c455e7a54e224f76feb5f643c041a4ffb43091c6705e5d4d5",
+          "dweb:/ipfs/QmTuKASQqPkK8x9tLVKW6G8VzD665xqTZV8YF1EwodYazx"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/codegen/tables/Mixed.sol": {
+        "keccak256": "0x212891acd187755e79b73bac2370f869e7c3c9f9c6ad5ee2e7a578fe79322814",
+        "urls": [
+          "bzz-raw://e199a05d6e8e0b2735277b1f8d34c1977bfbe7564786ec172596bdfc309b2c76",
+          "dweb:/ipfs/QmeeXPr2kiKHAXrxmK4cZnpRDDJC4cDrb73tj69Z79XuUb"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/codegen/tables/StoreMetadata.sol": {
+        "keccak256": "0x360cc0f613011df7d7e1dc4ef5648a17cdec9574df0c01dfbce9b5ef68556975",
+        "urls": [
+          "bzz-raw://17c9bbcdb1affddf1031c1f850b82a06e7e90b368919e41ac4be8756537bbc1c",
+          "dweb:/ipfs/QmcJ4Nk3gWToADf1hD2A5agByGVU3DwxBJk5jQY58jL2jw"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/codegen/tables/Vector2.sol": {
+        "keccak256": "0xfcd9fda67bc9c5ea55866f08f53e091b6a8ba8627da6710b8864c1fee1b97e16",
+        "urls": [
+          "bzz-raw://4c92456f8b7186b9401c26471148e6e048cfaedc81f2703e929011639d3843ae",
+          "dweb:/ipfs/Qmf65ygAksGN51dpeJuFcBbcppaJFPARPwqnEU5JUFPgkm"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/tightcoder/DecodeSlice.sol": {
+        "keccak256": "0xe760dfb8ff20cfb44eee6a5f03ac84abbc91382fca2e36c88c92046e6b3a66e0",
+        "urls": [
+          "bzz-raw://75eb4b355c547ffee62031d8dfb80844fa31fa4460543a088278083662dc4c12",
+          "dweb:/ipfs/Qmf8sRcrjJ6hEQ8TPwwe6KcXcE2MPw7Juvf7fKBZ1fBCt6"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/tightcoder/EncodeArray.sol": {
+        "keccak256": "0x046f0a2dc543c7a80be91ff26b19990a10fbe73cb605f4944af38e04326a43df",
+        "urls": [
+          "bzz-raw://d94f038e70179571d2aed3cbe03e812ce79a471372171fb78e8189bebd7ae1ac",
+          "dweb:/ipfs/QmUV4bkaEc8hefLpLRaGwmu4WZsqRLE9e6R8UdaKPExb6p"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/tightcoder/TightCoder.sol": {
+        "keccak256": "0xff0278a4e35174bbed8a38dad8ae7506f725bfe95f0b7c13829c353d68dd25dc",
+        "urls": [
+          "bzz-raw://26249ec0c2fa3a3430a2f8edbfc5cd678e34ea1cf1d7490ecaf1e925c976eb85",
+          "dweb:/ipfs/QmUpkhr5kFiDKc7rZ2z5HcTf5PkrWVJu5sa31tYv911cPL"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/System.sol": {
+        "keccak256": "0xf1342c8461adb4c5821c1ca106a67ba34402b36265fa63bf766eed937bd92bf9",
+        "urls": [
+          "bzz-raw://ea41f96a27a26d56d62824e007b3b0234d44fcd94361e5c8f40fdb334cbf444b",
+          "dweb:/ipfs/QmRfj4iS5Lu9V4e47wsPQy4op1qQ6hqaJpERLB5EyzqW38"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/WorldContext.sol": {
+        "keccak256": "0xd44a445ff07ac1551e5a8f17450381664ecf68dcb1c89fee8fb11b9b73c9cd7b",
+        "urls": [
+          "bzz-raw://1235cc5636743b9afbb313676fc4c84ac5607142c758b0bfc59107aff79ed30c",
+          "dweb:/ipfs/QmUtTUFjxKy7GtQC1Uzn6B2bRNZpcASFySPDjd16T47Rcz"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/IAccessManagementSystem.sol": {
+        "keccak256": "0xba4f728be36df11f4a988b61a577998d45da89314e26dcfa139e465840cef116",
+        "urls": [
+          "bzz-raw://0226026036fed756d36bde2f2fa9f8ad0ab21595a82740500d187e84a87e5a11",
+          "dweb:/ipfs/QmZu2MPVGWvfP59KeKPzJXNt5pd5sqyVqFS1YYANocYsmG"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/IBaseWorld.sol": {
+        "keccak256": "0x9fd7cfdb1e01e7c11c13051db19a3a15699d7d3159e568abc6a75ea02958d5c3",
+        "urls": [
+          "bzz-raw://ac2746e4ce755c0bd3c3d5848c9d4b100606bf558242ee39238c24f1565adebe",
+          "dweb:/ipfs/QmScDi6taecyeUuvrXKdzRXQGxajda3Jt4eg4JeBfR6Ns2"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/ICoreSystem.sol": {
+        "keccak256": "0x21e72828243fbf26d21594a423e9a32e86df07d3e435ea216a27c326546df106",
+        "urls": [
+          "bzz-raw://e8ac8c4b2cdeddaf458e562e3f236a5c798664443eca1658038540d5585ee090",
+          "dweb:/ipfs/QmPbh7JmBcxqJV4YP78zVXpsmCSGnSN6g7M27MTkyUjRgG"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/IEphemeralRecordSystem.sol": {
+        "keccak256": "0xd521b7a1ca533ca9071a131ab1fc38762e268c19aefd68095beb6941cfca4802",
+        "urls": [
+          "bzz-raw://8f433b49223f25c48f607fd068a4104ddacc8aac1c1984caae4631417b4aa1ab",
+          "dweb:/ipfs/QmXzm9Q33finw6ztLbWzDSxAwEJpVhJQS4mk6MwxePRy5C"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/IModule.sol": {
+        "keccak256": "0x0c9f5a12f8b27ae6f02b6ca7ccfd7ab1de349e5c4773f99cfab1fd4721bc4a06",
+        "urls": [
+          "bzz-raw://cafb66fbd4b3587121a2f2ff6fc5e4c32796e6469719899e181c3abac1479178",
+          "dweb:/ipfs/QmT6GKskhqmLadhuNVVbgDEgJ92jMsCdyLcfrSaiVQeZYf"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/IModuleInstallationSystem.sol": {
+        "keccak256": "0x77b05ecc98755a3b48f0296af3146486890d140eff7b1cc6e95be95a6aab80c0",
+        "urls": [
+          "bzz-raw://684155a7539c00796d2e00c3d67dc8d9c5e707e3fac37089df84a346607efdc2",
+          "dweb:/ipfs/QmeAPVzvTmaiHBtvFVw92XNmWmQ63RqWAgzNqBGRYwyzkz"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/ISystemHook.sol": {
+        "keccak256": "0x1dc2adc81b6e82cd5c1040f5885b2b762647166ff1114ee0c79cd478bd8ce5da",
+        "urls": [
+          "bzz-raw://77e5f86a4cf46f35d4514c9c3a8f47dfa359d8a7fbf726636010296e6955a1f0",
+          "dweb:/ipfs/QmPePQhXzCnF4kmTvjcQwwJQZuNPuvnEtkJKccrvRErG6B"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/IWorldErrors.sol": {
+        "keccak256": "0x214a9f68915fb01baad4a4ca2c65545d26e481fc14b0ceadb9e4f378c4eec08a",
+        "urls": [
+          "bzz-raw://54b93db1cb7d5212d54fe776587d5ceddf56ab276cc72c969f28604bddb8b665",
+          "dweb:/ipfs/QmSQJ82HRvBaknXWnwXWNYJj9EHuaiBCPe7W9C9uwyUNCW"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/IWorldKernel.sol": {
+        "keccak256": "0x35463c5500c73afa16f8b4bb4924825844f1c4e7207f0cb42017993dee09a1c5",
+        "urls": [
+          "bzz-raw://a19d3d6d604e3cdb849265daa5f1c9372739e135ecdc3c013f3fc51ca7240539",
+          "dweb:/ipfs/QmY1YPEu4GcN6s8XNz3UZMoFiV3aDtYo8SR5SGK4AUyKj1"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/world/src/interfaces/IWorldRegistrationSystem.sol": {
+        "keccak256": "0x879d17c5f951b615e18646e55501bd63eff6eee4827041d7cced474ce372cd68",
+        "urls": [
+          "bzz-raw://3a657845d1e063f4fd39617b1db90614d95b6ab08a77a29670c3c7e086537f55",
+          "dweb:/ipfs/QmdMbx7d8hvtUgtj7BhKPrqAGuhBj5LbMz1uAccLRRRb4B"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/forge-std/src/console.sol": {
+        "keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+        "urls": [
+          "bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+          "dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+        ],
+        "license": "MIT"
+      },
+      "src/codegen/world/IEncounterSystem.sol": {
+        "keccak256": "0xd703b6a1da88b2cd0137c8bc5d5d53739f38a5a96de300f0c151c0bf2993448a",
+        "urls": [
+          "bzz-raw://3654385ffa0bc28a6b718b37adfe3a218fbe6132c832ce6ba166be53aed74ef7",
+          "dweb:/ipfs/QmSbz3C7xGWDAQjogG8ihvLmaewh169xSPYXfB4hnKjPhE"
+        ],
+        "license": "MIT"
+      },
+      "src/codegen/world/IMapSystem.sol": {
+        "keccak256": "0x4152659702bc713154abd4987de79dd1c439500ca9d566fa7f93bd34b5830cb4",
+        "urls": [
+          "bzz-raw://4864b9ae1416da0dc18d257ca1dfaf00bc7a8011419c55fb163e2010af1a86f5",
+          "dweb:/ipfs/QmRUYsJxxL2athAaoFL7TWJ61TgFEFWB8JS6CnxyAjV49S"
+        ],
+        "license": "MIT"
+      },
+      "src/codegen/world/IWorld.sol": {
+        "keccak256": "0x20753fb6abe06d2e820a9cf90ce21213f0267534f74d844c0e4861a2ec132e70",
+        "urls": [
+          "bzz-raw://98f51676496ab815ff7d17e7a5293d88b08612c9b02fa65079ea1c38e3d2cdaa",
+          "dweb:/ipfs/QmYwMLP4BLKnkjKcWHYxqtgAo9B8T1EUVSj4CgY8jXqpcD"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/codegen/world/IWorld.sol",
+    "id": 67672,
+    "exportedSymbols": {
+      "IBaseWorld": [
+        51184
+      ],
+      "IEncounterSystem": [
+        67638
+      ],
+      "IMapSystem": [
+        67655
+      ],
+      "IWorld": [
+        67671
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:441:106",
+    "nodes": [
+      {
+        "id": 67657,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:106",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 67659,
+        "nodeType": "ImportDirective",
+        "src": "107:77:106",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/world/src/interfaces/IBaseWorld.sol",
+        "file": "@latticexyz/world/src/interfaces/IBaseWorld.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 67672,
+        "sourceUnit": 51185,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 67658,
+              "name": "IBaseWorld",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 51184,
+              "src": "116:10:106",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 67661,
+        "nodeType": "ImportDirective",
+        "src": "186:58:106",
+        "nodes": [],
+        "absolutePath": "src/codegen/world/IEncounterSystem.sol",
+        "file": "./IEncounterSystem.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 67672,
+        "sourceUnit": 67639,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 67660,
+              "name": "IEncounterSystem",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 67638,
+              "src": "195:16:106",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 67663,
+        "nodeType": "ImportDirective",
+        "src": "245:46:106",
+        "nodes": [],
+        "absolutePath": "src/codegen/world/IMapSystem.sol",
+        "file": "./IMapSystem.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 67672,
+        "sourceUnit": 67656,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 67662,
+              "name": "IMapSystem",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 67655,
+              "src": "254:10:106",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 67671,
+        "nodeType": "ContractDefinition",
+        "src": "407:65:106",
+        "nodes": [],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 67665,
+              "name": "IBaseWorld",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 51184,
+              "src": "427:10:106"
+            },
+            "id": 67666,
+            "nodeType": "InheritanceSpecifier",
+            "src": "427:10:106"
+          },
+          {
+            "baseName": {
+              "id": 67667,
+              "name": "IEncounterSystem",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 67638,
+              "src": "439:16:106"
+            },
+            "id": 67668,
+            "nodeType": "InheritanceSpecifier",
+            "src": "439:16:106"
+          },
+          {
+            "baseName": {
+              "id": 67669,
+              "name": "IMapSystem",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 67655,
+              "src": "457:10:106"
+            },
+            "id": 67670,
+            "nodeType": "InheritanceSpecifier",
+            "src": "457:10:106"
+          }
+        ],
+        "canonicalName": "IWorld",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 67664,
+          "nodeType": "StructuredDocumentation",
+          "src": "293:113:106",
+          "text": " The IWorld interface includes all systems dynamically added to the World\n during the deploy process."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          67671,
+          67655,
+          67638,
+          51184,
+          71453,
+          71212,
+          71199,
+          71181,
+          71184,
+          71341,
+          94339,
+          71329,
+          71316,
+          71306,
+          43939,
+          68286,
+          43893,
+          43930,
+          43899,
+          43873,
+          43777
+        ],
+        "name": "IWorld",
+        "nameLocation": "417:6:106",
+        "scope": 67672,
+        "usedErrors": [
+          68257,
+          68263,
+          68265,
+          68267,
+          68273,
+          68279,
+          68285,
+          94308,
+          94312,
+          94318,
+          94322,
+          94326,
+          94330,
+          94334,
+          94338
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 106
+}

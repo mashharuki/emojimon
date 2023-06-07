@@ -1,0 +1,680 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resource",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "AccessDenied",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "functionSelector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "FunctionSelectorExists",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "functionSelector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "FunctionSelectorNotFound",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resource",
+          "type": "string"
+        }
+      ],
+      "name": "InvalidSelector",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "module",
+          "type": "string"
+        }
+      ],
+      "name": "ModuleAlreadyInstalled",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resource",
+          "type": "string"
+        }
+      ],
+      "name": "ResourceExists",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "resource",
+          "type": "string"
+        }
+      ],
+      "name": "ResourceNotFound",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "system",
+          "type": "address"
+        }
+      ],
+      "name": "SystemExists",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resource\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"AccessDenied\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"functionSelector\",\"type\":\"bytes4\"}],\"name\":\"FunctionSelectorExists\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"functionSelector\",\"type\":\"bytes4\"}],\"name\":\"FunctionSelectorNotFound\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resource\",\"type\":\"string\"}],\"name\":\"InvalidSelector\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"module\",\"type\":\"string\"}],\"name\":\"ModuleAlreadyInstalled\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resource\",\"type\":\"string\"}],\"name\":\"ResourceExists\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"resource\",\"type\":\"string\"}],\"name\":\"ResourceNotFound\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"system\",\"type\":\"address\"}],\"name\":\"SystemExists\",\"type\":\"error\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/harukikondo/git/emojimon/node_modules/.pnpm/@latticexyz+world@2.0.0-alpha.1.177_typescript@5.0.4/node_modules/@latticexyz/world/src/interfaces/IWorldErrors.sol\":\"IWorldErrors\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":3000},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\"]},\"sources\":{\"/Users/harukikondo/git/emojimon/node_modules/.pnpm/@latticexyz+world@2.0.0-alpha.1.177_typescript@5.0.4/node_modules/@latticexyz/world/src/interfaces/IWorldErrors.sol\":{\"keccak256\":\"0x214a9f68915fb01baad4a4ca2c65545d26e481fc14b0ceadb9e4f378c4eec08a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://54b93db1cb7d5212d54fe776587d5ceddf56ab276cc72c969f28604bddb8b665\",\"dweb:/ipfs/QmSQJ82HRvBaknXWnwXWNYJj9EHuaiBCPe7W9C9uwyUNCW\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.13+commit.abaa5c0e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resource",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "AccessDenied"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "functionSelector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "FunctionSelectorExists"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "functionSelector",
+              "type": "bytes4"
+            }
+          ],
+          "type": "error",
+          "name": "FunctionSelectorNotFound"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resource",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "InvalidSelector"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "module",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "ModuleAlreadyInstalled"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resource",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "ResourceExists"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "resource",
+              "type": "string"
+            }
+          ],
+          "type": "error",
+          "name": "ResourceNotFound"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "system",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "SystemExists"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@latticexyz/=node_modules/@latticexyz/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 3000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "/Users/harukikondo/git/emojimon/node_modules/.pnpm/@latticexyz+world@2.0.0-alpha.1.177_typescript@5.0.4/node_modules/@latticexyz/world/src/interfaces/IWorldErrors.sol": "IWorldErrors"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "/Users/harukikondo/git/emojimon/node_modules/.pnpm/@latticexyz+world@2.0.0-alpha.1.177_typescript@5.0.4/node_modules/@latticexyz/world/src/interfaces/IWorldErrors.sol": {
+        "keccak256": "0x214a9f68915fb01baad4a4ca2c65545d26e481fc14b0ceadb9e4f378c4eec08a",
+        "urls": [
+          "bzz-raw://54b93db1cb7d5212d54fe776587d5ceddf56ab276cc72c969f28604bddb8b665",
+          "dweb:/ipfs/QmSQJ82HRvBaknXWnwXWNYJj9EHuaiBCPe7W9C9uwyUNCW"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "/Users/harukikondo/git/emojimon/node_modules/.pnpm/@latticexyz+world@2.0.0-alpha.1.177_typescript@5.0.4/node_modules/@latticexyz/world/src/interfaces/IWorldErrors.sol",
+    "id": 18978,
+    "exportedSymbols": {
+      "IWorldErrors": [
+        18977
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:435:29",
+    "nodes": [
+      {
+        "id": 18942,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:29",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 18977,
+        "nodeType": "ContractDefinition",
+        "src": "58:408:29",
+        "nodes": [
+          {
+            "id": 18946,
+            "nodeType": "ErrorDefinition",
+            "src": "85:38:29",
+            "nodes": [],
+            "errorSelector": "0f2fac61",
+            "name": "ResourceExists",
+            "nameLocation": "91:14:29",
+            "parameters": {
+              "id": 18945,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18944,
+                  "mutability": "mutable",
+                  "name": "resource",
+                  "nameLocation": "113:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18946,
+                  "src": "106:15:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18943,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "106:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "105:17:29"
+            }
+          },
+          {
+            "id": 18950,
+            "nodeType": "ErrorDefinition",
+            "src": "126:40:29",
+            "nodes": [],
+            "errorSelector": "ef28802c",
+            "name": "ResourceNotFound",
+            "nameLocation": "132:16:29",
+            "parameters": {
+              "id": 18949,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18948,
+                  "mutability": "mutable",
+                  "name": "resource",
+                  "nameLocation": "156:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18950,
+                  "src": "149:15:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18947,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "149:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "148:17:29"
+            }
+          },
+          {
+            "id": 18956,
+            "nodeType": "ErrorDefinition",
+            "src": "169:52:29",
+            "nodes": [],
+            "errorSelector": "e64c0348",
+            "name": "AccessDenied",
+            "nameLocation": "175:12:29",
+            "parameters": {
+              "id": 18955,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18952,
+                  "mutability": "mutable",
+                  "name": "resource",
+                  "nameLocation": "195:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18956,
+                  "src": "188:15:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18951,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "188:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18954,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "213:6:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18956,
+                  "src": "205:14:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18953,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "205:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "187:33:29"
+            }
+          },
+          {
+            "id": 18960,
+            "nodeType": "ErrorDefinition",
+            "src": "224:39:29",
+            "nodes": [],
+            "errorSelector": "e56728c0",
+            "name": "InvalidSelector",
+            "nameLocation": "230:15:29",
+            "parameters": {
+              "id": 18959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18958,
+                  "mutability": "mutable",
+                  "name": "resource",
+                  "nameLocation": "253:8:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18960,
+                  "src": "246:15:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18957,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "246:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "245:17:29"
+            }
+          },
+          {
+            "id": 18964,
+            "nodeType": "ErrorDefinition",
+            "src": "266:35:29",
+            "nodes": [],
+            "errorSelector": "b8648784",
+            "name": "SystemExists",
+            "nameLocation": "272:12:29",
+            "parameters": {
+              "id": 18963,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18962,
+                  "mutability": "mutable",
+                  "name": "system",
+                  "nameLocation": "293:6:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18964,
+                  "src": "285:14:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 18961,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "285:7:29",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "284:16:29"
+            }
+          },
+          {
+            "id": 18968,
+            "nodeType": "ErrorDefinition",
+            "src": "304:54:29",
+            "nodes": [],
+            "errorSelector": "9b2a16a9",
+            "name": "FunctionSelectorExists",
+            "nameLocation": "310:22:29",
+            "parameters": {
+              "id": 18967,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18966,
+                  "mutability": "mutable",
+                  "name": "functionSelector",
+                  "nameLocation": "340:16:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18968,
+                  "src": "333:23:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 18965,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "333:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "332:25:29"
+            }
+          },
+          {
+            "id": 18972,
+            "nodeType": "ErrorDefinition",
+            "src": "361:56:29",
+            "nodes": [],
+            "errorSelector": "3c2432e5",
+            "name": "FunctionSelectorNotFound",
+            "nameLocation": "367:24:29",
+            "parameters": {
+              "id": 18971,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18970,
+                  "mutability": "mutable",
+                  "name": "functionSelector",
+                  "nameLocation": "399:16:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18972,
+                  "src": "392:23:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 18969,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "392:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "391:25:29"
+            }
+          },
+          {
+            "id": 18976,
+            "nodeType": "ErrorDefinition",
+            "src": "420:44:29",
+            "nodes": [],
+            "errorSelector": "92b06d35",
+            "name": "ModuleAlreadyInstalled",
+            "nameLocation": "426:22:29",
+            "parameters": {
+              "id": 18975,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18974,
+                  "mutability": "mutable",
+                  "name": "module",
+                  "nameLocation": "456:6:29",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18976,
+                  "src": "449:13:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18973,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "449:6:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "448:15:29"
+            }
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IWorldErrors",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          18977
+        ],
+        "name": "IWorldErrors",
+        "nameLocation": "68:12:29",
+        "scope": 18978,
+        "usedErrors": [
+          18946,
+          18950,
+          18956,
+          18960,
+          18964,
+          18968,
+          18972,
+          18976
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 29
+}

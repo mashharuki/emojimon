@@ -1,0 +1,427 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "address",
+          "name": "grantee",
+          "type": "address"
+        }
+      ],
+      "name": "grantAccess",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "namespace",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "name",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "address",
+          "name": "grantee",
+          "type": "address"
+        }
+      ],
+      "name": "revokeAccess",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "grantAccess(bytes16,bytes16,address)": "f227e653",
+    "revokeAccess(bytes16,bytes16,address)": "1e42269e"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"address\",\"name\":\"grantee\",\"type\":\"address\"}],\"name\":\"grantAccess\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes16\",\"name\":\"namespace\",\"type\":\"bytes16\"},{\"internalType\":\"bytes16\",\"name\":\"name\",\"type\":\"bytes16\"},{\"internalType\":\"address\",\"name\":\"grantee\",\"type\":\"address\"}],\"name\":\"revokeAccess\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@latticexyz/world/src/interfaces/IAccessManagementSystem.sol\":\"IAccessManagementSystem\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":3000},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\"]},\"sources\":{\"node_modules/@latticexyz/world/src/interfaces/IAccessManagementSystem.sol\":{\"keccak256\":\"0xba4f728be36df11f4a988b61a577998d45da89314e26dcfa139e465840cef116\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0226026036fed756d36bde2f2fa9f8ad0ab21595a82740500d187e84a87e5a11\",\"dweb:/ipfs/QmZu2MPVGWvfP59KeKPzJXNt5pd5sqyVqFS1YYANocYsmG\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.13+commit.abaa5c0e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "address",
+              "name": "grantee",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "grantAccess"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes16",
+              "name": "namespace",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "bytes16",
+              "name": "name",
+              "type": "bytes16"
+            },
+            {
+              "internalType": "address",
+              "name": "grantee",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "revokeAccess"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@latticexyz/=node_modules/@latticexyz/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 3000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@latticexyz/world/src/interfaces/IAccessManagementSystem.sol": "IAccessManagementSystem"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@latticexyz/world/src/interfaces/IAccessManagementSystem.sol": {
+        "keccak256": "0xba4f728be36df11f4a988b61a577998d45da89314e26dcfa139e465840cef116",
+        "urls": [
+          "bzz-raw://0226026036fed756d36bde2f2fa9f8ad0ab21595a82740500d187e84a87e5a11",
+          "dweb:/ipfs/QmZu2MPVGWvfP59KeKPzJXNt5pd5sqyVqFS1YYANocYsmG"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@latticexyz/world/src/interfaces/IAccessManagementSystem.sol",
+    "id": 71182,
+    "exportedSymbols": {
+      "IAccessManagementSystem": [
+        71181
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:281:67",
+    "nodes": [
+      {
+        "id": 71162,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:67",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 71181,
+        "nodeType": "ContractDefinition",
+        "src": "107:205:67",
+        "nodes": [
+          {
+            "id": 71171,
+            "nodeType": "FunctionDefinition",
+            "src": "145:80:67",
+            "nodes": [],
+            "functionSelector": "f227e653",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "grantAccess",
+            "nameLocation": "154:11:67",
+            "parameters": {
+              "id": 71169,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 71164,
+                  "mutability": "mutable",
+                  "name": "namespace",
+                  "nameLocation": "174:9:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71171,
+                  "src": "166:17:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes16",
+                    "typeString": "bytes16"
+                  },
+                  "typeName": {
+                    "id": 71163,
+                    "name": "bytes16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "166:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes16",
+                      "typeString": "bytes16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 71166,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "193:4:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71171,
+                  "src": "185:12:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes16",
+                    "typeString": "bytes16"
+                  },
+                  "typeName": {
+                    "id": 71165,
+                    "name": "bytes16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes16",
+                      "typeString": "bytes16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 71168,
+                  "mutability": "mutable",
+                  "name": "grantee",
+                  "nameLocation": "207:7:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71171,
+                  "src": "199:15:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 71167,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "199:7:67",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "165:50:67"
+            },
+            "returnParameters": {
+              "id": 71170,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "224:0:67"
+            },
+            "scope": 71181,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 71180,
+            "nodeType": "FunctionDefinition",
+            "src": "229:81:67",
+            "nodes": [],
+            "functionSelector": "1e42269e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "revokeAccess",
+            "nameLocation": "238:12:67",
+            "parameters": {
+              "id": 71178,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 71173,
+                  "mutability": "mutable",
+                  "name": "namespace",
+                  "nameLocation": "259:9:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71180,
+                  "src": "251:17:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes16",
+                    "typeString": "bytes16"
+                  },
+                  "typeName": {
+                    "id": 71172,
+                    "name": "bytes16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "251:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes16",
+                      "typeString": "bytes16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 71175,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "278:4:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71180,
+                  "src": "270:12:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes16",
+                    "typeString": "bytes16"
+                  },
+                  "typeName": {
+                    "id": 71174,
+                    "name": "bytes16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "270:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes16",
+                      "typeString": "bytes16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 71177,
+                  "mutability": "mutable",
+                  "name": "grantee",
+                  "nameLocation": "292:7:67",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 71180,
+                  "src": "284:15:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 71176,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "284:7:67",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "250:50:67"
+            },
+            "returnParameters": {
+              "id": 71179,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "309:0:67"
+            },
+            "scope": 71181,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAccessManagementSystem",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          71181
+        ],
+        "name": "IAccessManagementSystem",
+        "nameLocation": "117:23:67",
+        "scope": 71182,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 67
+}
