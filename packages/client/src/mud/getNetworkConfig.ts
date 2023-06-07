@@ -15,7 +15,7 @@ export async function getNetworkConfig(): Promise<NetworkConfig> {
   const params = new URLSearchParams(window.location.search);
 
   const chainId = Number(
-    params.get("chainId") || import.meta.env.VITE_CHAIN_ID || 31337
+    params.get("chainId") || import.meta.env.VITE_CHAIN_ID || 4242
   );
   const chainIndex = supportedChains.findIndex((c) => c.id === chainId);
   const chain = supportedChains[chainIndex];
