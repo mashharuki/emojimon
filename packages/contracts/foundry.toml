@@ -15,5 +15,6 @@ extra_output_files = [
 ]
 fs_permissions = [{ access = "read", path = "./"}]
 
+# ここを任意のRPC_URLを設定する。
 [profile.lattice-testnet]
 eth_rpc_url = "https://follower.testnet-chain.linfra.xyz"
