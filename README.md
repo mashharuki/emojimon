@@ -46,3 +46,23 @@ Deployment completed in 69.518 seconds
   }
 }
 ```
+
+### うまく動かないとき
+
+```bash
+foundryup -C 87bc53f
+```
+
+### ファウセット
+
+```bash
+pnpm mud faucet --address 0x5FbDB2315678afecb367f032d93F642f64180aa3
+```
+
+### Explorer
+
+[https://explorer.testnet-chain.linfra.xyz/](https://explorer.testnet-chain.linfra.xyz/)
+
+### Testnet faucet
+
+[Faucet](https://rpc.guildofchains.com/faucet)

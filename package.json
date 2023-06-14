@@ -7,12 +7,12 @@
     "dev": "concurrently -n contracts,client -c cyan,magenta \"cd packages/contracts && pnpm run dev\" \"cd packages/client && pnpm run dev\"",
     "dev:client": "pnpm --filter 'client' run dev",
     "dev:contracts": "pnpm --filter 'contracts' dev",
+    "deploy:testnet": "cd packages/contracts && pnpm run deploy:testnet ",
     "foundry:up": "curl -L https://foundry.paradigm.xyz | bash && bash $HOME/.foundry/bin/foundryup",
     "initialize": "pnpm recursive run initialize",
     "mud:up": "pnpm recursive exec mud set-version -v canary && pnpm install",
     "prepare": "(forge --version || pnpm foundry:up)",
-    "test": "pnpm recursive run test",
-    "deploy:testnet": "cd packages/contracts && pnpm run deploy:testnet"
+    "test": "pnpm recursive run test"
   },
   "devDependencies": {
     "@latticexyz/cli": "2.0.0-alpha.1.177",
