@@ -6,12 +6,16 @@ import { console } from "forge-std/console.sol";
 import { IWorld } from "../src/codegen/world/IWorld.sol";
 import { EncounterTrigger, MapConfig, Obstruction, Position } from "../src/codegen/Tables.sol";
 import { TerrainType } from "../src/codegen/Types.sol";
-import { positionToEntityKey } from "./../src/positionToEntityKey.sol";
- 
+import { positionToEntityKey } from "../src/positionToEntityKey.sol";
+
 /**
- * deploy Script
+ * デプロイスクリプト
  */
 contract PostDeploy is Script {
+  /**
+   * run method 
+   * @param worldAddress Worldコントラクトのアドレス
+   */
   function run(address worldAddress) external {
     console.log("Deployed world: ", worldAddress);
     IWorld world = IWorld(worldAddress);
@@ -23,7 +27,9 @@ contract PostDeploy is Script {
     TerrainType T = TerrainType.TallGrass;
     TerrainType B = TerrainType.Boulder;
 
-    // map情報
+    console.log("TerrainType defined");
+ 
+    // マップ情報の定義
     TerrainType[20][20] memory map = [
       [O, O, O, O, O, O, T, O, O, O, O, O, O, O, O, O, O, O, O, O],
       [O, O, T, O, O, O, O, O, T, O, O, O, O, B, O, O, O, O, O, O],
@@ -50,26 +56,29 @@ contract PostDeploy is Script {
     uint32 height = uint32(map.length);
     uint32 width = uint32(map[0].length);
     bytes memory terrain = new bytes(width * height);
-
+ 
     for (uint32 y = 0; y < height; y++) {
       for (uint32 x = 0; x < width; x++) {
         TerrainType terrainType = map[y][x];
         if (terrainType == TerrainType.None) continue;
  
         terrain[(y * width) + x] = bytes1(uint8(terrainType));
-
+ 
         bytes32 entity = positionToEntityKey(x, y);
-        if(terrainType == TerrainType.Boulder) { 
+        if (terrainType == TerrainType.Boulder) {
           Position.set(world, entity, x, y);
           Obstruction.set(world, entity, true);
-        } else if(terrainType == TerrainType.TallGrass) {
+        } else if (terrainType == TerrainType.TallGrass) {
           Position.set(world, entity, x, y);
           EncounterTrigger.set(world, entity, true);
         }
       }
     }
+    console.log("Terrain set");
  
     MapConfig.set(world, width, height, terrain);
+    
+    console.log("MapConfig set");
  
     vm.stopBroadcast();
   }

@@ -1,31 +1,16 @@
 import { mudConfig } from "@latticexyz/world/register";
- 
+
 /**
- * MUDの設定
+ * MUDの条件
  */
 export default mudConfig({
+  // 各種定義
   enums: {
-    // マップ上の情報
-    TerrainType: [
-      "None",
-      "TallGrass",
-      "Boulder"
-    ],
-    // モンスターの種類
-    MonsterType: [
-      "None",
-      "Eagle",
-      "Rat",
-      "Caterpillar",
-    ],
-    // 捕獲ステータスの定義
-    MonsterCatchResult: [
-      "Missed", 
-      "Caught", 
-      "Fled"
-    ],
+    MonsterCatchResult: ["Missed", "Caught", "Fled"],
+    MonsterType: ["None", "Eagle", "Rat", "Caterpillar"],
+    TerrainType: ["None", "TallGrass", "Boulder"],
   },
-  // 各種管理する情報の定義
+  // 各種ブロックチェーンで管理されるデータの定義
   tables: {
     Encounter: {
       keySchema: {

@@ -21,11 +21,6 @@ type Props = {
   encounter?: ReactNode;
 };
 
-/**
- * GameMap Comoponent 
- * @param param0 
- * @returns 
- */
 export const GameMap = ({
   width,
   height,
