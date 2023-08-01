@@ -8,6 +8,9 @@ import { EncounterTrigger, MapConfig, Obstruction, Position } from "../src/codeg
 import { TerrainType } from "../src/codegen/Types.sol";
 import { positionToEntityKey } from "./../src/positionToEntityKey.sol";
  
+/**
+ * deploy Script
+ */
 contract PostDeploy is Script {
   function run(address worldAddress) external {
     console.log("Deployed world: ", worldAddress);
@@ -19,7 +22,8 @@ contract PostDeploy is Script {
     TerrainType O = TerrainType.None;
     TerrainType T = TerrainType.TallGrass;
     TerrainType B = TerrainType.Boulder;
- 
+
+    // map情報
     TerrainType[20][20] memory map = [
       [O, O, O, O, O, O, T, O, O, O, O, O, O, O, O, O, O, O, O, O],
       [O, O, T, O, O, O, O, O, T, O, O, O, O, B, O, O, O, O, O, O],

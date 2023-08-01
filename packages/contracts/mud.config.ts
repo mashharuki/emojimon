@@ -5,23 +5,27 @@ import { mudConfig } from "@latticexyz/world/register";
  */
 export default mudConfig({
   enums: {
+    // マップ上の情報
     TerrainType: [
       "None",
       "TallGrass",
       "Boulder"
     ],
+    // モンスターの種類
     MonsterType: [
       "None",
       "Eagle",
       "Rat",
       "Caterpillar",
     ],
+    // 捕獲ステータスの定義
     MonsterCatchResult: [
       "Missed", 
       "Caught", 
       "Fled"
     ],
   },
+  // 各種管理する情報の定義
   tables: {
     Encounter: {
       keySchema: {

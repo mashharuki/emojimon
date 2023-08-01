@@ -6,6 +6,11 @@
 
 [![emojimon demo](https://github.com/latticexyz/mud/blob/3fdaa9880639a9546f80fbffdcc4a713178328c1/tutorials/emojimon/images/emojimon-intro.gif?raw=true)](https://mud.dev/tutorials/emojimon/)
 
+### 動かし方
+
+```bash
+pnpm run dev
+```
 
 ### テストネットへのデプロイ
 
@@ -25,7 +30,7 @@ Transactions saved to: /Users/harukikondo/git/emojimon/packages/contracts/broadc
 
 Deployment completed in 69.518 seconds
 
- Deployment result (written to ./worlds.json and deploys/4242): 
+ Deployment result (written to ./worlds.json and deploys/4242):
 
 {
   worldAddress: '0x21179691c26519d04746770582c102567cFe5591',
